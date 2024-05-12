@@ -5,7 +5,7 @@ This repository contains a simple Management System implemented in Python, utili
 
 
 ## Requirements
-=> python
+=> python<br>
 => Django
 
 ## setup
