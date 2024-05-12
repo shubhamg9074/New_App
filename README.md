@@ -11,10 +11,10 @@ This repository contains a simple Management System implemented in Python, utili
 ## setup
 To setup Django application Follow these steps
 
-=> Download the Source Code from the github
-=> open the source code in IDE 
-=> Install requirements.txt using the command
- -->pip install requirements.txt
+=> Download the Source Code from the github<br>
+=> open the source code in IDE <br>
+=> Install requirements.txt using the command<br>
+ -->pip install requirements.txt<br>
 ## Connecting Database in Django Application
 ->After installing requirements Go To Project Setting.py file and put MySQL configrations to connect Django ORM to MySQL
 
