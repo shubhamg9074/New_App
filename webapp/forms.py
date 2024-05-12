@@ -1,9 +1,9 @@
 from django import forms
-from webapp.models import Student
+from webapp.models import users
 
 class Modelform(forms.ModelForm):
     class Meta:
-        model=Student
+        model=users
         fields='__all__'
         widget={
             'user_id': forms.NumberInput(attrs={'class':'form-control'}),
@@ -11,9 +11,3 @@ class Modelform(forms.ModelForm):
             'email': forms.TextInput(attrs={'class': 'form-control'}),
             'role': forms.TextInput(attrs={'class': 'form-control'}),
         }
-
-    def clean_my_field(self):
-        user_id = self.cleaned_data.get('user_id')
-        if Student.objects.filter(user_id=user_id).exists():
-            raise forms.ValidationError("This primary key is already taken.")
-        return user_id

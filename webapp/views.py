@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from webapp.forms import Modelform
-from webapp.models import Student
+from webapp.models import users
 
 # Create your views here.
 
@@ -16,7 +16,7 @@ def Forms(requsest):
         return render(requsest,'myapp/index.html',{'forms':forms})
 
 def thanks(request):
-    data=Student.objects.all()
+    data=users.objects.all()
     mydict={'elist':data}
     return render(request,'myapp/thanks.html',mydict)
 
@@ -27,7 +27,7 @@ def hello(request):
 
 def data_by_id(request, id):
     try:
-        obj = Student.objects.get(user_id=id)
+        obj = users.objects.get(user_id=id)
         return render(request, 'myapp/dataid.html', {'obj': obj})
-    except Student.DoesNotExist:
+    except users.DoesNotExist:
         return render(request, 'myapp/dataid.html', {'obj': None})

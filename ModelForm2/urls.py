@@ -23,5 +23,5 @@ urlpatterns = [
     path('new_user/',views.Forms),
     path('users/',views.thanks),
     path('',views.hello),
-    path('get_data/<int:id>/', views.data_by_id, name='data_by_id'),
+    path('users/<int:id>/', views.data_by_id, name='data_by_id'),
 ]
