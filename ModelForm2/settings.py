@@ -76,10 +76,21 @@ WSGI_APPLICATION = 'ModelForm2.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'users',
+        'USER': 'root',
+        'PASSWORD': 'shubh0903@',
+        'HOST': 'localhost',  # Or the IP address of your MySQL server
+        'PORT': '3306',        # Or the port MySQL is running on
     }
 }
 
