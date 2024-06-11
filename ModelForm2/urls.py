@@ -25,3 +25,5 @@ urlpatterns = [
     path('',views.hello),
     path('users/<int:id>/', views.data_by_id, name='data_by_id'),
 ]
+""""something has 
+to change"""
